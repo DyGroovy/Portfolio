@@ -55,7 +55,7 @@ export default {
       repository: {
         title: 'Stem and Leaf Plot Calculator',
         description: 'A project that creates stem and leaf plots for data visualization.',
-        link: 'https://github.com/DyGroovy/Engineering-Data-Analysis-Project',
+        link: 'https://vercel.live/link/engineering-data-analysis-project.vercel.app?via=project-dashboard-alias-list&p=1',
         image: require('@/assets/images/st.jpg') // Replace with a relevant image or screenshot
       },
       vercelRepository: {
