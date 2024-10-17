@@ -55,13 +55,15 @@ body {
   color: #333;
   padding-top: 60px; 
 }
+
 #app {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 nav {
   background-color: black; 
-  padding: 20px 20px; 
+  padding: 10px 20px; 
   position: fixed; 
   top: 0; 
   left: 0;
@@ -71,6 +73,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -79,75 +82,49 @@ nav ul {
   margin: 0; 
   flex: 1; 
 }
+
 nav ul li {
   display: inline; 
 }
+
 nav ul li a {
   color: white; 
   text-decoration: none;
   font-weight: bold;
   padding: 10px;
+  transition: background-color 0.3s; /* Smooth transition */
 }
+
 nav ul li a:hover {
-  text-decoration: underline;
+  background-color: #333; /* Add a hover effect */
 }
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column; 
     align-items: center;
+    padding: 10px 0; /* Add some vertical padding */
+  }
+  
+  nav ul li {
+    width: 100%; /* Make links full width */
+    text-align: center; /* Center the text */
+  }
+  
+  nav ul li a {
+    padding: 12px; /* Increase padding for better touch targets */
+    font-size: 16px; /* Slightly larger font for readability */
   }
 }
-</style>
 
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 14px; /* Smaller font size for very small screens */
+    padding: 10px; /* Adjust padding for mobile */
+  }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  padding-top: 60px; 
-}
-#app {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-nav {
-  background-color: black; 
-  padding: 20px 20px; 
-  position: fixed; 
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  z-index: 1000; 
-  display: flex; 
-  justify-content: space-between;
-  align-items: center;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex; 
-  justify-content: space-around;
-  margin: 0; 
-  flex: 1; 
-}
-nav ul li {
-  display: inline; 
-}
-nav ul li a {
-  color: white; 
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px;
-}
-nav ul li a:hover {
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column; 
-    align-items: center;
+  body {
+    padding-top: 70px; /* More space for the fixed nav */
   }
 }
 </style>
