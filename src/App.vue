@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ 'login-page': isLoginPage }">
     <nav v-if="!isLoginPage">
+      <div class="logo">Pangilinan, Dylan Ranze Z.</div>
       <ul>
         <li><router-link to="/portfolio/profile">Profile</router-link></li>
         <li><router-link to="/portfolio/showcase">Showcase</router-link></li>
@@ -50,8 +51,7 @@ export default {
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: 'Georgia', serif; 
   color: #333;
   padding-top: 60px; 
 }
@@ -62,41 +62,44 @@ body {
 }
 
 nav {
-  background-color: black; 
-  padding: 10px 20px; 
+  background-color: #000000; 
+  padding: 15px 30px; 
   position: fixed; 
   top: 0; 
   left: 0;
-  width: 100%; 
+  width: 98%; 
   z-index: 1000; 
   display: flex; 
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+  font-size: 28px; 
+  font-weight: bold;
+  color: #ffffff; 
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   display: flex; 
-  justify-content: space-around;
+  gap: 30px; 
   margin: 0; 
-  flex: 1; 
-}
-
-nav ul li {
-  display: inline; 
 }
 
 nav ul li a {
-  color: white; 
+  color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
-  padding: 10px;
-  transition: background-color 0.3s; 
+  padding: 10px 15px; 
+  transition: color 0.3s, text-shadow 0.3s; 
+  border-radius: 5px; 
 }
 
 nav ul li a:hover {
-  background-color: #333; 
+  color: #6e6e6e; 
+  text-shadow: 0 0 5px rgba(0, 86, 179, 0.5); 
 }
 
 @media (max-width: 768px) {
