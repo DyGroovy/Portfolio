@@ -92,39 +92,39 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   padding: 10px;
-  transition: background-color 0.3s; /* Smooth transition */
+  transition: background-color 0.3s; 
 }
 
 nav ul li a:hover {
-  background-color: #333; /* Add a hover effect */
+  background-color: #333; 
 }
 
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column; 
     align-items: center;
-    padding: 10px 0; /* Add some vertical padding */
+    padding: 10px 0; 
   }
   
   nav ul li {
-    width: 100%; /* Make links full width */
-    text-align: center; /* Center the text */
+    width: 100%; 
+    text-align: center; 
   }
   
   nav ul li a {
-    padding: 12px; /* Increase padding for better touch targets */
-    font-size: 16px; /* Slightly larger font for readability */
+    padding: 12px; 
+    font-size: 16px; 
   }
 }
 
 @media (max-width: 480px) {
   nav ul li a {
-    font-size: 14px; /* Smaller font size for very small screens */
-    padding: 10px; /* Adjust padding for mobile */
+    font-size: 14px; 
+    padding: 10px; 
   }
 
   body {
-    padding-top: 70px; /* More space for the fixed nav */
+    padding-top: 70px; 
   }
 }
 </style>
