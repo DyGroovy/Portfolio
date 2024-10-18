@@ -1,9 +1,8 @@
 <template>
   <div class="portfolio-showcase">
     <h1>Portfolio Showcase</h1>
-    <p>My Ongoing and Finished Projects</p>
+    <p>My Finished Projects</p>
 
-    <!-- Repository Cards -->
     <div class="repository-container">
       <div class="repository-card">
         <img :src="repository.image" alt="Stem and Leaf Plot Calculator" class="repo-image" />
@@ -33,7 +32,6 @@
       </div>
     </div>
 
-    <!-- Video Cards -->
     <div class="video-container">
       <div class="video-card" v-for="(video, index) in videos" :key="index">
         <img :src="video.previewImage" alt="Video preview" class="video-preview-image" />
@@ -41,6 +39,15 @@
           <h3>{{ video.title }}</h3>
           <button @click="playVideo(video.src)" class="play-button">Play Video</button>
           <p>{{ video.description }}</p>
+        </div>
+      </div>
+
+      <div class="repository-card">
+        <img :src="tempHumidIoT.image" alt="Temperature and Humidity IoT" class="repo-image" />
+        <div class="repo-content">
+          <h2>{{ tempHumidIoT.title }}</h2>
+          <p>{{ tempHumidIoT.description }}</p>
+          <button @click="openLink(tempHumidIoT.link)" class="view-button">View on GitHub</button>
         </div>
       </div>
     </div>
@@ -67,31 +74,36 @@ export default {
         link: 'https://github.com/DyGroovy/Admin-Dashboard-Final-Proj',
         image: require('@/assets/images/admin.jpg')
       },
+      tempHumidIoT: {
+        title: 'Temperature and Humidity IoT (Arduino Cloud)',
+        link: 'https://github.com/DyGroovy/TempHumidIoT',
+        image: require('@/assets/images/tmp.jpg')
+      },
       videos: [
         {
           title: 'Bluetooth Controlled Robot Car',
           src: require('@/assets/video/blue.mp4'),
-          previewImage: require('@/assets/images/os.jpg'),
+          previewImage: require('@/assets/images/tooth.jpg'),
         },
         {
           title: 'LED Memorization Game',
           src: require('@/assets/video/ledg.mp4'),
-          previewImage: require('@/assets/images/os.jpg'),
+          previewImage: require('@/assets/images/game.jpg'),
         },
         {
           title: 'Obstacle Avoiding Robot Car',
           src: require('@/assets/video/obs.mp4'),
-          previewImage: require('@/assets/images/os.jpg'),
+          previewImage: require('@/assets/images/obs.jpg'),
         },
         {
           title: 'RFID Door Lock using Servo',
           src: require('@/assets/video/rfid.mp4'),
-          previewImage: require('@/assets/images/os.jpg'),
+          previewImage: require('@/assets/images/door.jpg'),
         },
         {
           title: 'Traffic Light System',
           src: require('@/assets/video/traffic.mp4'),
-          previewImage: require('@/assets/images/os.jpg'),
+          previewImage: require('@/assets/images/tlights.jpg'),
         }
       ]
     };
@@ -113,6 +125,7 @@ export default {
   margin: 0 auto;
   padding: 20px;
   margin-left: -25%;
+  margin-top: 5%;
 }
 
 .repository-container {
